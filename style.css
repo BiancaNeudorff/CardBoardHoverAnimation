@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 5px 0px #e2e2e2;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.card:after,
+.card:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+    border-radius: 8px;
+}
+
+.card:before {
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: scaleY(0);
+}
+
+.card:after {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    transform: scaleX(0);
+}
+
+.card:hover:before {
+    transform: scaleY(1);
+}
+
+.card:hover:after {
+    transform: scaleX(1);
+}
+
+.text {
+    margin: 20px auto;
+}
